@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-image: url("image/pastel-colors-cute-background-0ccry6zjp6hh078l.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #304463;
+}
+
+.container {
+    background-color: white;
+    /* 100vh : 화면을 보는 만큼(100) 높이 */
+    max-width: 800px;
+    min-height: 100vh;   
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.task-area {
+    border:1px solid lightgray;
+    margin-top: 2em;
+    
+}
+
+.input-area {
+    width: 60vw;
+}
+#task-input {
+    width: 50vw;
+    height: 5.5vh;
+}
+.task-tabs {
+    display: flex;
+    border-bottom:1px solid lightgray;
+    /* position: relative를 부모인 task-tabs에게 줘야, under-line의 absolute의 기준 점이 된다 (Position: relative must be given to the parent task-tabs to become the absolute reference point of the under-line) */
+    position: relative;
+}
+
+.task-tabs div {
+    padding: 1em;
+     /* 커서를 손모양(pointer)로 설정하기 */
+    cursor:pointer;
+}
+/* I made with an id style because I am going to use a lot of the javascript */
+#under-line {
+    height: 4px;
+    background-color: #FF76CE;
+    position: absolute;
+    width: 30px;
+    left: 12px;    
+    bottom:5px;
+    padding:0px;
+    transition:0.5s;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 0px ;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+    
+
+}
+.button-box {
+    display: flex;
+    background-color: white;
+}
+.button-box button {
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: white;
+    transition: 0.5s;
+}
+.task button {
+    margin: 0;
+    text-align: center;
+    border: none;
+    padding: 1em;
+    background: none;
+}
+/* icon */
+.rotate-icon {   
+    color:gray;
+    margin: 0;
+    background-color: white;
+    border: none;
+}
+
+.check-icon {
+    color:#5fff2f;   
+    font-weight: 500px;
+    margin: 0;
+    background-color: white;
+    border: none;
+}
+
+.delete-icon {
+    height: 100%;
+    color:#f34d4d;
+    margin: 0;
+    background-color: white;
+    border: none;
+}
+/* the end icon */
+
+.task-done {
+    /* 텍스트가운데에 줄을 그어주는 값 : line-through */
+    text-decoration: line-through;
+    background-color: lightgray;
+    transition: 0.5s;
+    
+}
+
+.task span {
+
+}

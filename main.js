@@ -71,6 +71,7 @@ for(let i=1; i < tabsClick.length; i++) {
 
 function addTask() {
     console.log("clicked");
+  
 
     let taskValue = taskInput.value;
     if (taskValue === "") return alert("할일을 입력해주세요");
@@ -120,11 +121,11 @@ function render() {
     for (let i = 0; i < list.length; i++) {
         if (list[i].isComplete == true) {
             
-            resultHTML += `<div class="task task-done">
-                                <span>
+            resultHTML += `<div class="row task task-done">
+                                <span class="col-md-9">
                                     ${list[i].taskContent}
                                 </span>                   
-                                <div class="button-box">
+                                <div class="col-md-3 button-box">
                                     <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-rotate-left rotate-icon"></i></button>
                                     <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash delete-icon"></i></button>
                                 </div>
@@ -132,11 +133,11 @@ function render() {
         } else {
             //resultHTML = resultHTML +  은 아래와 같은 기능
             resultHTML += 
-                `<div class="task">
-                    <span>
+                `<div class="row task">
+                    <span class="col-md-9">
                         ${list[i].taskContent}  
                     </span>                   
-                    <div class="button-box">
+                    <div class="col-md-3 button-box">
                         <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-check check-icon"></i></button>
                         <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash delete-icon"></i></button>
                     </div>
@@ -231,3 +232,5 @@ function filter(event) {
 function randomIDGenerate() {
     return '_' + Math.random().toString(36).substr(2, 9);
 }
+
+

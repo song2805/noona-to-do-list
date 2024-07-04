@@ -57,7 +57,6 @@ addButton.addEventListener("click", addTask);
 taskInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
         addTask(event);
-        taskInput.value =""
         }
     });
 
@@ -75,7 +74,7 @@ function addTask() {
 
     let taskValue = taskInput.value;
     if (taskValue === "") return alert("할일을 입력해주세요");
-   
+    
     //3.할일앱 3탄: 객체의 활용해서 추가 정보가 필요할 때
 
     let task = {
@@ -84,6 +83,7 @@ function addTask() {
         isComplete: false
     };
     taskList.push(task);
+    taskInput.value=""; // Input 창에 할일을 입력하고 나면 입력창이 자동으로 비워지게 하기
     console.log(taskList);
     render();
 }

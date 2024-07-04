@@ -33,13 +33,25 @@
             </div>
             <!-- taskList =[] 안의 값을 그려주기 위해서 #task 전체를 가져오기 위해서 task의 부모인 task-dashboard를 가져온다 -->
             <div id="task-dashboard">
-                <!-- <div class="task">
-                    <div id="goBackHome">
-                         go back home
-                    </div>                   
-                    <div>
-                        <button>check</button>
-                        <button>Delete</button>
+                <!-- <div class="task task-done">
+                                <span>
+                                    ${list[i].taskContent}
+                                </span>                   
+                                <div class="button-box">
+                                    <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-rotate-left rotate-icon"></i></button>
+                                    <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash delete-icon"></i></button>
+                                </div>
+                            </div>`;
+        } else {
+            //resultHTML = resultHTML +  은 아래와 같은 기능
+            resultHTML += 
+                `<div class="task">
+                    <span>
+                        ${list[i].taskContent}  
+                    </span>                   
+                    <div class="button-box">
+                        <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-check check-icon"></i></button>
+                        <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash delete-icon"></i></button>
                     </div>
                 </div> -->
             </div>

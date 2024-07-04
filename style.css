@@ -15,6 +15,14 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+input {
+    border: 2px solid #FFBE98;
+   
+}
+input:focus {
+    outline: none;
+    border: 3px solid #FFBE98;
+}
 .task-area {
     border:1px solid lightgray;
     margin-top: 2em;
@@ -24,9 +32,17 @@ body {
 .input-area {
     width: 60vw;
 }
+
+#add-button {
+    border: none;
+    background-color: #FFBE98;
+    width: 2.3em;
+    height: 2.3em;
+}
 #task-input {
-    width: 50vw;
+    width: 40vw;
     height: 5.5vh;
+   
 }
 .task-tabs {
     display: flex;
@@ -60,9 +76,9 @@ body {
     padding-bottom: 0px;
     padding-left: 10px;
     padding-right: 0px;
-    
-
+    border-bottom: 1px solid lightgray;
 }
+
 .button-box {
     display: flex;
     background-color: white;
@@ -113,8 +129,4 @@ body {
     background-color: lightgray;
     transition: 0.5s;
     
-}
-
-.task span {
-
 }
